@@ -1,0 +1,11 @@
+*-debug.log
+*-error.log
+.oclif.manifest.json
+/dist
+/package-lock.json
+/tmp
+node_modules
+
+.c9/
+.idea/
+
