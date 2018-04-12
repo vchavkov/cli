@@ -1,0 +1,67 @@
+{
+  "name": "cli",
+  "description": "CLI",
+  "version": "0.0.1",
+  "author": "vchavkov@assistance.bg",
+  "bin": {
+    "cli": "./bin/run"
+  },
+  "bugs": "https://github.com/vchavkov/cli/issues",
+  "dependencies": {
+    "@oclif/command": "1",
+    "@oclif/config": "1",
+    "@oclif/plugin-help": "1",
+    "heroku-cli-util": "^8.0.5",
+    "bytes": "2.4.0",
+    "co": "4.6.0",
+    "heroku-run": "3.2.14",
+    "mkdirp": "0.5.1",
+    "smooth-progress": "1.0.4"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "1",
+    "@oclif/test": "1",
+    "chai": "4",
+    "eslint": "4",
+    "eslint-config-oclif": "1",
+    "globby": "8",
+    "mocha": "5"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    ".oclif.manifest.json",
+    "/bin",
+    "/src"
+  ],
+  "homepage": "https://github.com/vchavkov/cli",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "cli",
+    "plugins": [
+      "@oclif/plugin-help"
+    ],
+    "topics": {
+      "webclient": {
+        "description": "WebClient Deployment Manager"
+      },
+      "vstb": {
+        "description": "VSTB Deployment Manager"
+      }
+    }
+  },
+  "repository": "vchavkov/cli",
+  "scripts": {
+    "postpack": "rm -f .oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "mocha --forbid-only \"test/**/*.test.js\"",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
