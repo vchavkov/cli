@@ -1,5 +1,3 @@
-'use strict'
-
 function showProgress(rsp) {
   const progress = require('smooth-progress')
   const bytes = require('bytes')

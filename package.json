@@ -12,10 +12,10 @@
     "@oclif/config": "1",
     "@oclif/plugin-help": "1",
     "heroku-cli-util": "^8.0.5",
-    "bytes": "2.4.0",
     "co": "4.6.0",
     "heroku-run": "3.2.14",
     "mkdirp": "0.5.1",
+    "bytes": "2.4.0",
     "smooth-progress": "1.0.4"
   },
   "devDependencies": {

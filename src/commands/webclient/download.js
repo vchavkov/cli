@@ -1,18 +1,16 @@
 const {Command, flags} = require('@oclif/command')
 
+
 class DownloadCommand extends Command {
   async run() {
 
-    const cli = require('heroku-cli-util')
-    const co = require('co')
-
     const download = require('../lib/download')
-    const repo = require('../lib/repo')
-    const app = context.app
 
-    let url = yield repo.getURL(app)
-    let filename = context.args.filename || `${app}-repo.tgz`
+    let url = "http://alv-build-store.minervanetworks.com/~qa/builds/WebClient/2.4.0-N/WebClient.2.4.0.2.68.R.WC_CL177071.KS_CL163578.cva/WebClient-2.4.0.2.68.R.WC_CL177071.KS_CL163578.cva-RPM.iso"
+    // let filename = context.args.filename || `${app}-repo.tgz`
+    let filename = "WebClient-2.4.0.2.68.R.WC_CL177071.KS_CL163578.cva-RPM.iso"
     console.error(`Downloading repository to ${filename}`)
+
     yield download(url, filename, {progress: true})
 
     // const {flags} = this.parse(DownloadCommand)
